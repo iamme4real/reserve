@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Africa Reserve Bank | Dashboard</title>
+    <meta name="description" content="Personal and business dashboard overview." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard-shell dashboard-app">
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-brand" aria-label="South Africa Reserve Bank Home">
+          <span class="brand-mark">SAR</span>
+          <div class="brand-text">
+            <strong>South Africa Reserve</strong>
+            <small>Bank</small>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main navigation">
+          <a class="nav-item active" href="dashboard.html">Overview</a>
+          <a class="nav-item" href="accounts.html">Accounts</a>
+          <a class="nav-item" href="transfer.html">Transfers</a>
+          <a class="nav-item" href="card-controls.html">Cards</a>
+          <a class="nav-item" href="analytics.html">Analytics</a>
+          <a class="nav-item" href="support.html">Support</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <span>Portfolio health</span>
+          <strong>Excellent</strong>
+          <small>12.8% up vs last month</small>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-topbar">
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="dashboard-meta">
+            <div class="brand" aria-label="South Africa Reserve Bank Home">
+              <span class="brand-mark">SAR</span>
+              <span class="brand-text">
+                <strong>South Africa Reserve</strong>
+                <small>Bank</small>
+              </span>
+            </div>
+          </div>
+
+          <button class="button button-primary" type="button" onclick="sessionStorage.clear(); window.location.href='login.html';">Log out</button>
+        </header>
+
+        <section class="dashboard-header">
+          <div class="dashboard-header-copy">
+            <span class="dashboard-pill">Premium Client</span>
+            <h1>Welcome back, Jacoba Elizabeth Fourie</h1>
+            <p>Your accounts are performing strongly across both personal and business portfolios.</p>
+          </div>
+        </section>
+
+        <section class="summary-grid">
+          <article class="summary-card">
+            <span class="summary-label">Total portfolio value</span>
+            <div class="summary-amount">R26,787,873.98</div>
+            <div class="summary-meta">
+              <span>Net growth this month</span>
+              <strong>+8.4%</strong>
+            </div>
+          </article>
+
+          <aside class="summary-card total-card">
+            <span class="summary-label">Combined balance</span>
+            <strong>R26,787,873.98</strong>
+            <div class="mini-summary">
+              <div>
+                <span>Personal</span>
+                <strong>R13,393,937.00</strong>
+              </div>
+              <div>
+                <span>Business</span>
+                <strong>R13,393,936.98</strong>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="insight-grid" aria-label="Account insights">
+          <article class="insight-card">
+            <span class="insight-label">Available cash</span>
+            <strong>R78.4M</strong>
+            <small>Ready to transfer</small>
+          </article>
+          <article class="insight-card">
+            <span class="insight-label">Monthly inflow</span>
+            <strong>R22.1M</strong>
+            <small>Up 12.8% from last month</small>
+          </article>
+          <article class="insight-card">
+            <span class="insight-label">Pending transfers</span>
+            <strong>3</strong>
+            <small>2 external, 1 internal</small>
+          </article>
+        </section>
+
+        <section class="analytics-grid" aria-label="Portfolio analytics">
+          <article class="chart-card">
+            <div class="card-header-row">
+              <h3>Cash flow</h3>
+              <span class="trend-pill">+18.4%</span>
+            </div>
+            <div class="chart-bars" aria-label="Monthly cash flow chart">
+              <span style="height: 30%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 66%"></span>
+              <span style="height: 78%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 88%"></span>
+            </div>
+            <div class="chart-labels">
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="card-header-row">
+              <h3>Goals</h3>
+              <span class="trend-pill soft">On track</span>
+            </div>
+            <div class="goal-line">
+              <div>
+                <span>Retirement</span>
+                <strong>72%</strong>
+              </div>
+              <div class="goal-meter"><span style="width: 72%"></span></div>
+            </div>
+            <div class="goal-line">
+              <div>
+                <span>Home fund</span>
+                <strong>58%</strong>
+              </div>
+              <div class="goal-meter"><span style="width: 58%"></span></div>
+            </div>
+            <div class="goal-line">
+              <div>
+                <span>Business expansion</span>
+                <strong>81%</strong>
+              </div>
+              <div class="goal-meter"><span style="width: 81%"></span></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="account-grid">
+          <article class="account-card">
+            <div class="account-header">
+              <h3>Personal Account</h3>
+              <span class="account-tag">Active</span>
+            </div>
+
+            <div class="account-balance-row">
+              <div>
+                <span class="account-label">Available balance</span>
+                <div class="account-balance">R6,696,968.50</div>
+              </div>
+              <span class="account-balance-tag">+4.2%</span>
+            </div>
+
+            <div class="account-meta-grid">
+              <div>
+                <span>Account type</span>
+                <strong>Personal</strong>
+              </div>
+              <div>
+                <span>Routing</span>
+                <strong>021000021</strong>
+              </div>
+              <div>
+                <span>Last activity</span>
+                <strong>Today</strong>
+              </div>
+              <div>
+                <span>Account no.</span>
+                <strong>•••• 9824</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-header">
+              <h3>Business Account</h3>
+              <span class="account-tag">Active</span>
+            </div>
+
+            <div class="account-balance-row">
+              <div>
+                <span class="account-label">Available balance</span>
+                <div class="account-balance">R6,696,968.50</div>
+              </div>
+              <span class="account-balance-tag">+5.1%</span>
+            </div>
+
+            <div class="account-meta-grid">
+              <div>
+                <span>Account type</span>
+                <strong>Business</strong>
+              </div>
+              <div>
+                <span>Routing</span>
+                <strong>021000021</strong>
+              </div>
+              <div>
+                <span>Last activity</span>
+                <strong>Today</strong>
+              </div>
+              <div>
+                <span>Account no.</span>
+                <strong>•••• 4671</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-header">
+              <h3>Savings Account</h3>
+              <span class="account-tag">Active</span>
+            </div>
+
+            <div class="account-balance-row">
+              <div>
+                <span class="account-label">Available balance</span>
+                <div class="account-balance">R6,696,968.49</div>
+              </div>
+              <span class="account-balance-tag">+3.7%</span>
+            </div>
+
+            <div class="account-meta-grid">
+              <div>
+                <span>Account type</span>
+                <strong>Savings</strong>
+              </div>
+              <div>
+                <span>Routing</span>
+                <strong>021000021</strong>
+              </div>
+              <div>
+                <span>Last activity</span>
+                <strong>Today</strong>
+              </div>
+              <div>
+                <span>Account no.</span>
+                <strong>•••• 3158</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-header">
+              <h3>Investment Account</h3>
+              <span class="account-tag">Active</span>
+            </div>
+
+            <div class="account-balance-row">
+              <div>
+                <span class="account-label">Available balance</span>
+                <div class="account-balance">R6,696,968.49</div>
+              </div>
+              <span class="account-balance-tag">+6.8%</span>
+            </div>
+
+            <div class="account-meta-grid">
+              <div>
+                <span>Account type</span>
+                <strong>Investment</strong>
+              </div>
+              <div>
+                <span>Routing</span>
+                <strong>021000021</strong>
+              </div>
+              <div>
+                <span>Last activity</span>
+                <strong>Today</strong>
+              </div>
+              <div>
+                <span>Account no.</span>
+                <strong>•••• 7412</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="action-panel">
+          <div class="action-header">
+            <h3>Quick actions</h3>
+          </div>
+          <div class="action-grid">
+            <a class="action-button" href="mobile-deposit.html">📱 Mobile deposit</a>
+            <a class="action-button" href="check-deposit.html">🧾 Check deposit</a>
+            <a class="action-button" href="transfer.html">💸 Transfer money</a>
+            <a class="action-button" href="budget-planner.html">📊 Budget planner</a>
+            <a class="action-button" href="open-account.html">🏦 Open new account</a>
+            <a class="action-button" href="card-controls.html">💳 Card controls</a>
+          </div>
+        </section>
+
+      <section class="activity-card">
+        <div class="activity-toolbar">
+          <h3>Recent activity</h3>
+          <div class="toolbar-controls">
+            <label class="toolbar-field">
+              <span>Search</span>
+              <input id="transaction-search" type="search" placeholder="Search transactions" />
+            </label>
+            <label class="toolbar-field select-field">
+              <span>Filter</span>
+              <select id="transaction-filter">
+                <option value="all">All</option>
+                <option value="credit">Credits</option>
+                <option value="debit">Debits</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="transaction-columns">
+          <div class="transaction-panel">
+            <h4>Credits</h4>
+            <ul class="activity-list">
+              <li data-type="credit" data-search="global investments">
+                <div class="activity-label">
+                  <strong>Global investments</strong>
+                  <span>Today, 09:12 AM</span>
+                </div>
+                <span class="amount credit">+R12,500,000</span>
+              </li>
+              <li data-type="credit" data-search="client settlement">
+                <div class="activity-label">
+                  <strong>Client settlement</strong>
+                  <span>Mon, 08:19 AM</span>
+                </div>
+                <span class="amount credit">+R20,000,000</span>
+              </li>
+              <li data-type="credit" data-search="dividend payout">
+                <div class="activity-label">
+                  <strong>Dividend payout</strong>
+                  <span>Sun, 07:02 PM</span>
+                </div>
+                <span class="amount credit">+R6,400,000</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="transaction-panel">
+            <h4>Debits</h4>
+            <ul class="activity-list">
+              <li data-type="debit" data-search="property acquisition">
+                <div class="activity-label">
+                  <strong>Property acquisition</strong>
+                  <span>Yesterday, 03:44 PM</span>
+                </div>
+                <span class="amount debit">-R8,200,000</span>
+              </li>
+              <li data-type="debit" data-search="office expansion">
+                <div class="activity-label">
+                  <strong>Office expansion</strong>
+                  <span>Thu, 11:30 AM</span>
+                </div>
+                <span class="amount debit">-R4,750,000</span>
+              </li>
+              <li data-type="debit" data-search="luxury transfer">
+                <div class="activity-label">
+                  <strong>Luxury transfer</strong>
+                  <span>Tue, 02:15 PM</span>
+                </div>
+                <span class="amount debit">-R2,300,000</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Africa Reserve Bank | Transfer Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="page-layout">
+      <header class="dashboard-topbar page-topbar">
+        <div class="dashboard-meta">
+          <div class="brand" aria-label="South Africa Reserve Bank Home">
+            <span class="brand-mark">SAR</span>
+            <span class="brand-text">
+              <strong>South Africa Reserve</strong>
+              <small>Bank</small>
+            </span>
+          </div>
+        </div>
+
+        <nav class="page-topbar-menu" id="pageMenu" aria-label="Main navigation">
+          <a href="mobile-deposit.html">Mobile deposit</a>
+          <a href="check-deposit.html">Check deposit</a>
+          <a href="card-controls.html">Card</a>
+          <a href="transfer.html">Transfer</a>
+          <a href="support.html">Support</a>
+        </nav>
+
+        <button class="button button-primary" type="button" onclick="sessionStorage.clear(); window.location.href='login.html';">Log out</button>
+      </header>
+
+      <div class="auth-shell form-shell">
+        <aside class="auth-visual">
+          <p class="eyebrow">Send money</p>
+          <h1>Transfer funds instantly.</h1>
+          <p>Move money between accounts or pay a recipient with secure, real-time transfers.</p>
+        </aside>
+
+        <main class="auth-card">
+          <h2>Transfer money</h2>
+          <p class="auth-copy">Enter the transfer details below.</p>
+
+          <form id="transfer-form" class="auth-form action-form">
+          <div class="field-group">
+            <label for="transfer-type">Transfer type</label>
+            <select id="transfer-type">
+              <option value="internal">Internal transfer</option>
+              <option value="external">External account</option>
+            </select>
+          </div>
+
+          <div id="internal-transfer-message" class="transfer-message error-message">
+            <strong>⚠️ Money can't be moved</strong>
+            <p>Internal transfers between your accounts are currently unavailable. Please select an external account to proceed.</p>
+          </div>
+
+          <div class="field-group">
+            <label for="from-account">From account</label>
+            <select id="from-account">
+              <option>Personal Account</option>
+              <option>Business Account</option>
+            </select>
+          </div>
+
+          <div class="field-group external-field hidden">
+            <label for="recipient-name">Recipient name</label>
+            <input id="recipient-name" type="text" placeholder="John Smith" />
+          </div>
+
+          <div class="field-group external-field hidden">
+            <label for="bank-name">Bank name</label>
+            <input id="bank-name" type="text" placeholder="National Trust Bank" />
+          </div>
+
+          <div class="field-group external-field hidden">
+            <label for="routing-number">Address</label>
+            <input id="routing-number" type="text" placeholder="123 Main Street" />
+          </div>
+
+          <div class="field-group external-field hidden">
+            <label for="external-account-number">Account number</label>
+            <input id="external-account-number" type="text" placeholder="9876543210" />
+          </div>
+
+          <div class="field-group internal-field">
+            <label for="to-account">To account</label>
+            <select id="to-account">
+              <option>Business Account</option>
+              <option>Personal Account</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="transfer-amount">Amount</label>
+            <input id="transfer-amount" type="number" placeholder="Enter amount" min="0" step="0.01" />
+          </div>
+
+          <div id="transfer-status" class="transfer-status hidden" aria-live="polite">
+            <div class="transfer-status-label">Transfering funds</div>
+            <div class="transfer-progress">
+              <span id="transfer-progress-bar"></span>
+            </div>
+            <strong id="transfer-progress-text">0%</strong>
+          </div>
+
+          <button type="submit" class="button button-primary">Send transfer</button>
+        </form>
+
+        <div id="error-message-modal" class="error-message-modal hidden" aria-live="polite">
+          <div class="error-message-box">
+            <div class="error-message-header">
+              <h3>⚠️ Alert</h3>
+              <button id="close-error-msg" class="close-btn" type="button" aria-label="Close message">✕</button>
+            </div>
+            <p id="error-message-text" class="error-message-content"></p>
+            <button id="error-message-ok" type="button" class="button button-primary">OK</button>
+          </div>
+        </div>
+
+        <div id="passphrase-modal" class="passphrase-modal hidden" aria-live="polite">
+          <div class="passphrase-box">
+            <h3>Security verification</h3>
+            <p>Please enter your passphrase to continue the transfer.</p>
+            <div class="passphrase-hint">
+              <strong>Hint:</strong> Grant2026
+            </div>
+            <input id="passphrase-input" type="password" maxlength="20" placeholder="Enter your passphrase" autocomplete="off" />
+            <div class="passphrase-actions">
+              <button id="continue-transfer" type="button" class="button button-primary">Continue</button>
+              <button id="cancel-transfer" type="button" class="button button-secondary">Cancel</button>
+            </div>
+            <p id="passphrase-error" class="form-message error"></p>
+          </div>
+        </div>
+
+          <p class="auth-meta"><a href="dashboard.html">Back to dashboard</a></p>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

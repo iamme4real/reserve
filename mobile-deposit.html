@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Africa Reserve Bank | Mobile Deposit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="page-layout">
+      <header class="dashboard-topbar page-topbar">
+        <div class="dashboard-meta">
+          <div class="brand" aria-label="South Africa Reserve Bank Home">
+            <span class="brand-mark">SAR</span>
+            <span class="brand-text">
+              <strong>South Africa Reserve</strong>
+              <small>Bank</small>
+            </span>
+          </div>
+        </div>
+
+        <nav class="page-topbar-menu" id="pageMenu" aria-label="Main navigation">
+          <a href="mobile-deposit.html">Mobile deposit</a>
+          <a href="check-deposit.html">Check deposit</a>
+          <a href="card-controls.html">Card</a>
+          <a href="transfer.html">Transfer</a>
+          <a href="support.html">Support</a>
+        </nav>
+
+        <button class="button button-primary" type="button" onclick="sessionStorage.clear(); window.location.href='login.html';">Log out</button>
+      </header>
+
+      <div class="auth-shell form-shell">
+        <aside class="auth-visual">
+          <p class="eyebrow">Quick deposit</p>
+          <h1>Deposit from anywhere.</h1>
+          <p>Snap a photo of your check and transfer funds into your account in just a few steps.</p>
+        </aside>
+
+        <main class="auth-card">
+          <h2>Mobile deposit</h2>
+          <p class="auth-copy">Upload a check and confirm your deposit details.</p>
+
+          <form class="auth-form action-form">
+          <div class="field-group">
+            <label for="deposit-account">Deposit to</label>
+            <select id="deposit-account">
+              <option>Personal Account</option>
+              <option>Business Account</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="deposit-amount">Amount</label>
+            <input id="deposit-amount" type="number" placeholder="Enter amount" min="0" step="0.01" />
+          </div>
+
+          <div class="field-group">
+            <label for="check-image">Check image</label>
+            <input id="check-image" type="file" accept="image/*" />
+          </div>
+
+          <button type="submit" class="button button-primary">Submit deposit</button>
+        </form>
+
+          <p class="auth-meta"><a href="dashboard.html">Back to dashboard</a></p>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Africa Reserve Bank | Card Controls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="page-layout">
+      <header class="dashboard-topbar page-topbar">
+        <div class="dashboard-meta">
+          <div class="brand" aria-label="South Africa Reserve Bank Home">
+            <span class="brand-mark">SAR</span>
+            <span class="brand-text">
+              <strong>South Africa Reserve</strong>
+              <small>Bank</small>
+            </span>
+          </div>
+        </div>
+
+        <nav class="page-topbar-menu" id="pageMenu" aria-label="Main navigation">
+          <a href="mobile-deposit.html">Mobile deposit</a>
+          <a href="check-deposit.html">Check deposit</a>
+          <a href="card-controls.html">Card</a>
+          <a href="transfer.html">Transfer</a>
+          <a href="support.html">Support</a>
+        </nav>
+
+        <button class="button button-primary" type="button" onclick="sessionStorage.clear(); window.location.href='login.html';">Log out</button>
+      </header>
+
+      <div class="auth-shell form-shell">
+        <aside class="auth-visual">
+          <p class="eyebrow">Card management</p>
+          <h1>Card controls</h1>
+          <p>Freeze cards, set travel alerts, and manage your preferred spending limits.</p>
+        </aside>
+
+        <main class="auth-card">
+          <h2>Card Controls</h2>
+          <p class="auth-copy">Manage your cards and security settings.</p>
+
+          <div class="cards-container">
+          <!-- Personal Card -->
+          <div class="card-control-item">
+            <div class="card-control-header">
+              <div>
+                <h3>💳 Personal Debit Card</h3>
+                <p class="card-number-masked">•••• 9824</p>
+              </div>
+              <div id="card-1-status" class="card-status-badge active">Active</div>
+            </div>
+
+            <div class="card-control-actions">
+              <button id="card-1-lock" class="card-action-btn lock-btn" type="button">
+                <span class="btn-icon">�</span>
+                <span class="btn-text">Lock Card</span>
+              </button>
+              <button id="card-1-unlock" class="card-action-btn unlock-btn hidden" type="button">
+                <span class="btn-icon">🔓</span>
+                <span class="btn-text">Unlock Card</span>
+              </button>
+            </div>
+
+            <div class="card-control-options">
+              <label class="checkbox-option">
+                <input type="checkbox" checked />
+                <span>Enable online purchases</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" checked />
+                <span>Enable international transactions</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" checked />
+                <span>Enable contactless payments</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Business Card -->
+          <div class="card-control-item">
+            <div class="card-control-header">
+              <div>
+                <h3>💼 Business Card</h3>
+                <p class="card-number-masked">•••• 5102</p>
+              </div>
+              <div id="card-2-status" class="card-status-badge active">Active</div>
+            </div>
+
+            <div class="card-control-actions">
+              <button id="card-2-lock" class="card-action-btn lock-btn" type="button">
+                <span class="btn-icon">�</span>
+                <span class="btn-text">Lock Card</span>
+              </button>
+              <button id="card-2-unlock" class="card-action-btn unlock-btn hidden" type="button">
+                <span class="btn-icon">🔓</span>
+                <span class="btn-text">Unlock Card</span>
+              </button>
+            </div>
+
+            <div class="card-control-options">
+              <label class="checkbox-option">
+                <input type="checkbox" checked />
+                <span>Enable online purchases</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" checked />
+                <span>Enable international transactions</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" />
+                <span>Enable contactless payments</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+          <p class="auth-meta"><a href="dashboard.html">Back to dashboard</a></p>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
